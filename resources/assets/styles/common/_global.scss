@@ -1,0 +1,235 @@
+/**
+Typography
+ */
+
+body {
+  font-family: $body-font-family;
+  color: theme-color("dark");
+  overflow-x: hidden;
+}
+
+h1,
+.h1 {
+  font-size: 3.5rem;
+
+  .light & {
+    color: white;
+  }
+
+  &.four-oh-four {
+    font-size: 15vw;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 3rem;
+  font-weight: 300;
+
+  &.section-heading {
+    font-family: $body-font-family;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: theme-color("blue");
+    text-transform: uppercase;
+
+    .light & {
+      color: theme-color('green');
+    }
+  }
+
+  .light & {
+    color: white;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 2.5rem;
+
+  .light & {
+    color: white;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 1.875rem;
+
+  .light & {
+    color: white;
+  }
+}
+
+h5,
+.h5 {
+  font-family: $body-font-family;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  .light & {
+    color: white;
+  }
+}
+
+h6,
+.h6 {
+  font-family: $body-font-family;
+  font-weight: 600;
+
+  .light & {
+    color: white;
+  }
+}
+
+a {
+  color: theme-color("orange");
+  font-weight: 600;
+
+  &:hover {
+    color: theme-color("green");
+    text-decoration: none;
+  }
+
+  &.link-arrow {
+    transition: all 300ms linear;
+
+    &::after {
+      content: '»';
+      margin-left: 0.25em;
+      transition: margin-left 200ms ease-in-out;
+    }
+
+    &:hover::after {
+      margin-left: 0.5em;
+    }
+  }
+}
+
+code {
+  color: theme-color("orange");
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 300;
+
+  &.large {
+    font-size: 1.375rem;
+  }
+
+  .light & {
+    color: white;
+  }
+}
+
+.text {
+  ol {
+    padding: 1.2em;
+    list-style: none;
+    counter-reset: item;
+
+    > li {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      font-weight: 300;
+      padding-left: 1em;
+      text-indent: -16px;
+
+      &::before {
+        content: counter(item) ". ";
+        counter-increment: item;
+        color: theme-color('green');
+        position: relative;
+        left: -0.6em;
+      }
+    }
+  }
+
+  ul {
+    padding: 1.2em;
+    list-style: none;
+
+    > li {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      font-weight: 300;
+      padding-left: 1em;
+      text-indent: -10px;
+      margin-top: 0.5em;
+
+      &::before {
+        content: "•";
+        color: theme-color('dark');
+        font-size: 33px;
+        line-height: 0;
+        position: relative;
+        top: 0.15em;
+        left: -0.6em;
+      }
+    }
+  }
+
+  .light & {
+    color: white;
+
+    li::before {
+      color: theme-color('dark');
+    }
+  }
+}
+
+section {
+  padding: $section-padding;
+  position: relative;
+
+  &.bg-video {
+    overflow: hidden;
+  }
+}
+
+#bgvid {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+table {
+  width: 100%;
+  margin: 2em 0;
+
+  th {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0.5em;
+  }
+
+  th[colspan='2'] {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    background: transparentize(theme-color("dark"), 0.8);
+  }
+
+  tr:nth-child(even) {
+    background-color: theme-color('light');
+  }
+
+  thead {
+    border-bottom: 1px solid theme-color('blue');
+
+    th {
+      color: theme-color('brand');
+    }
+  }
+
+  td {
+    border-left: 1px solid theme-color('dark');
+    padding: 0.5em;
+  }
+}
