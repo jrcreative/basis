@@ -1,3 +1,7 @@
+# Basis
+A starter theme built for rapid development, modularity, and flexibility. It's based on the awesome work from guys at roots.io, ACF, and a whole lot of little things that I've learned from all of the awesome people that I've worked with along the journey.
+
+
 # [Sage](https://roots.io/sage/)
 [![Packagist](https://img.shields.io/packagist/vpre/roots/sage.svg?style=flat-square)](https://packagist.org/packages/roots/sage)
 [![devDependency Status](https://img.shields.io/david/dev/roots/sage.svg?style=flat-square)](https://david-dm.org/roots/sage#info=devDependencies)
