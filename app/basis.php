@@ -1,8 +1,17 @@
 <?php
 
-//include('cpts/events.php');
-include( 'cpts/resources.php' );
-include( 'cpts/testimonials.php' );
+
+//include( 'cpts/staff.php' );
+include( 'cpts/project.php' );
+
+include( 'widget/MuamCurrentIssueWidget.php');
+
+/**
+ * Register our Widgets
+ */
+//add_action( 'widgets_init', function() {
+//	register_widget( 'MuamCurrentIssueWidget' );
+//});
 
 add_action('wp_enqueue_scripts', function () {
 	wp_enqueue_style('sage/librefranklin', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700', false, null);
@@ -197,7 +206,6 @@ function basis_gallery( $output = '', $atts, $instance ) {
             </div>';
 	}
 	$return .= '</div>';
-
 	return $return;
 }
 
@@ -234,3 +242,34 @@ function basis_column_width() {
 	echo '.column-featured { text-align: center; width:110px; overflow:hidden }';
 	echo '</style>';
 }
+
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+
+
+add_action('woocommerce_before_main_content', 'basis_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'basis_wrapper_end', 10);
+
+function basis_wrapper_start() {
+	echo '<main id="main">';
+}
+
+function basis_wrapper_end() {
+	echo '</main>';
+}
+
+
+// Customize ACF - move to basis builder plugin
+
+function acf_apply_metabox_title($field_groups) {
+
+	foreach ( $field_groups as $k => $field_group ) {
+		if ( isset($field_group['metabox_title']) && !empty($field_group['metabox_title']) ) {
+			$field_groups[$k]['title'] = $field_group['metabox_title'];
+		}
+	}
+
+	return $field_groups;
+}
+//add_filter('acf/get_field_groups', 'acf_apply_metabox_title');

@@ -6,7 +6,7 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
-	use Section, HeroSlider, Hero, PageHeader, HomeTestimonial, PostGrid, Featured, CtaBar;
+	use Section, HeroSlider, Hero, PageHeader, PostGrid;
 
 	/**
 	 *
@@ -26,12 +26,6 @@ class FrontPage extends Controller
 		return $this->hero_slider_output($hero_slider);
 	}
 
-	public function cta_bar() {
-
-		$cta_bar = get_field('cta_bar');
-
-		return $this->cta_bar_output($cta_bar);
-	}
 
 	/**
 	 * @return array of Content Blocks

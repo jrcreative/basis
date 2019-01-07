@@ -1,5 +1,3 @@
-@php(the_content())
-
 @if($content_blocks)
     @foreach($content_blocks as $block)
         @include('blocks.'.$block['type'], array($block['type'] => $block))

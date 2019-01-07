@@ -6,6 +6,10 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "admin": [
+      "./scripts/admin.js",
+      "./styles/admin.css"
     ]
   },
   "publicPath": "/wp-content/themes/basis",

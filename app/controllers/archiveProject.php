@@ -5,16 +5,9 @@ namespace App;
 use Sober\Controller\Controller;
 use WP_Query;
 
-class archiveEvent extends Controller
+class archiveProject extends Controller
 {
     use PageHeader;
-
-    private $page_id = '';
-
-    public function __construct()
-    {
-        $this->page_id = get_option( 'page_for_posts' );
-    }
 
     public function pageHeader()
     {
@@ -28,22 +21,5 @@ class archiveEvent extends Controller
         ];
 
         return $this->page_header_output($page_header);
-    }
-
-    public function eventStickyQuery()
-    {
-		return new WP_Query([
-			'post_type' => ['resource'],
-			'meta_key' => 'featured_post',
-			'meta_value' => true,
-			'posts_per_page' => 3,
-		]);
-    }
-
-    public function eventMainQuery()
-    {
-    	return new WP_Query([
-    		'post_type' => ['resource']
-	    ]);
     }
 }

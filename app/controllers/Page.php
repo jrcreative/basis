@@ -6,7 +6,7 @@ use Sober\Controller\Controller;
 
 class Page extends Controller
 {
-    use Section, Hero, PageHeader, Testimonial, PostGrid, Featured, MediaGrid, Divider;
+    use Section, Hero, PageHeader, PostGrid, MediaGrid, Divider;
 
     /**
      *

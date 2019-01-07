@@ -6,7 +6,7 @@ use Sober\Controller\Controller;
 
 class Single extends Controller
 {
-    use PostGrid, SidebarCTA;
+    use PostGrid;
 
 	private $blogIndexId = '';
 

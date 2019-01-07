@@ -12,6 +12,7 @@
                     </div>
                 </div>
             @endif
+
             <div class="content row">
                 @foreach($section['cols'] as $col)
                     @if ($col['content_type'] === 'text')
@@ -25,7 +26,7 @@
                             <p class="caption">{!! $col['content']['image']['caption'] !!}</p>
                         </div>
                     @elseif ($col['content_type'] === 'card')
-                        <div class='card-wrap {{ $col['class']}} @if($col['content']['image_fills_background']) image-fills-background @endif'>
+                        <div class='card-wrap card-custom-top {{ $col['class']}} @if($col['content']['image_fills_background']) image-fills-background @endif'>
                             @if($col['content']['link']) <a href="{!! $col['content']['link'] !!}"> @endif
                                 <div class="card">
                                     @if( isset($col['content']['image']['url']))
