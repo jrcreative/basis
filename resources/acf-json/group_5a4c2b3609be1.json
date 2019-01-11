@@ -3,7 +3,7 @@
     "title": "TEMPLATE: Default",
     "fields": [
         {
-            "key": "field_5a4c2b3ea1f03",
+            "key": "field_5a4c2b3ea1f03__trashed",
             "label": "Header",
             "name": "page_header",
             "type": "clone",
@@ -24,7 +24,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_5a4c2b63a1f04",
+            "key": "field_5a4c2b63a1f04__trashed",
             "label": "Content Blocks",
             "name": "content_blocks",
             "type": "clone",
@@ -79,5 +79,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1520291133
+    "modified": 1547138015
 }

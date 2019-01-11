@@ -3,7 +3,7 @@
     "title": "TEMPLATE: Blog",
     "fields": [
         {
-            "key": "field_59deaf70dd687",
+            "key": "field_59deaf70dd687__trashed",
             "label": "Page Header",
             "name": "page_header",
             "type": "group",
@@ -41,7 +41,7 @@
             ]
         },
         {
-            "key": "field_5aaaccd695eff",
+            "key": "field_5aaaccd695eff__trashed",
             "label": "Hero",
             "name": "hero",
             "type": "group",
@@ -96,5 +96,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1522535446
+    "modified": 1547140631
 }

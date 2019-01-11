@@ -3,7 +3,7 @@
     "title": "BLOCK: Testimonial",
     "fields": [
         {
-            "key": "field_5a4ef1148492a",
+            "key": "field_5a4ef1148492a__trashed",
             "label": "Testimonial",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5a5e8d898303c",
+            "key": "field_5a5e8d898303c__trashed",
             "label": "Heading Alignment",
             "name": "heading_alignment",
             "type": "button_group",
@@ -42,7 +42,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a5e8d738303b",
+            "key": "field_5a5e8d738303b__trashed",
             "label": "Text Color",
             "name": "text_color",
             "type": "button_group",
@@ -64,7 +64,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a5e8d988303d",
+            "key": "field_5a5e8d988303d__trashed",
             "label": "Section Heading",
             "name": "section_heading",
             "type": "text",
@@ -83,7 +83,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a4eee58f1e38",
+            "key": "field_5a4eee58f1e38__trashed",
             "label": "Limit",
             "name": "limit",
             "type": "number",
@@ -104,7 +104,7 @@
             "step": ""
         },
         {
-            "key": "field_59c44220ddce5",
+            "key": "field_59c44220ddce5__trashed",
             "label": "Testimonial Topic",
             "name": "testimonial_topic",
             "type": "taxonomy",
@@ -126,7 +126,7 @@
             "multiple": 0
         },
         {
-            "key": "field_5a4d663a1d5d1",
+            "key": "field_5a4d663a1d5d1__trashed",
             "label": "Background",
             "name": "background",
             "type": "clone",
@@ -164,5 +164,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1520291038
+    "modified": 1547138005
 }

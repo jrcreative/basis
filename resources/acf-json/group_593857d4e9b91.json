@@ -3,7 +3,7 @@
     "title": "DEFAULT: Content Blocks",
     "fields": [
         {
-            "key": "field_593857dce5a62",
+            "key": "field_593857dce5a62__trashed",
             "label": "Content Blocks",
             "name": "cb",
             "type": "flexible_content",
@@ -243,5 +243,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1520291109
+    "modified": 1547137902
 }

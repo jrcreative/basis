@@ -3,7 +3,7 @@
     "title": "BLOCK: Hero",
     "fields": [
         {
-            "key": "field_59f2283af53d6",
+            "key": "field_59f2283af53d6__trashed",
             "label": "Hero",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5a712d93f0747",
+            "key": "field_5a712d93f0747__trashed",
             "label": "Text Alignment",
             "name": "text_alignment",
             "type": "button_group",
@@ -42,7 +42,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a5e66c57df46",
+            "key": "field_5a5e66c57df46__trashed",
             "label": "Text Color",
             "name": "text_color",
             "type": "button_group",
@@ -64,7 +64,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a4c3035df556",
+            "key": "field_5a4c3035df556__trashed",
             "label": "Title",
             "name": "title",
             "type": "text",
@@ -83,7 +83,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a4c3040df557",
+            "key": "field_5a4c3040df557__trashed",
             "label": "Subtitle",
             "name": "subtitle",
             "type": "text",
@@ -102,7 +102,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a4c3049df558",
+            "key": "field_5a4c3049df558__trashed",
             "label": "Description",
             "name": "description",
             "type": "wysiwyg",
@@ -121,7 +121,7 @@
             "delay": 0
         },
         {
-            "key": "field_5a4c3075df559",
+            "key": "field_5a4c3075df559__trashed",
             "label": "Call To Action",
             "name": "call_to_action",
             "type": "repeater",
@@ -177,7 +177,7 @@
             ]
         },
         {
-            "key": "field_5a740677ae080",
+            "key": "field_5a740677ae080__trashed",
             "label": "Background",
             "name": "background",
             "type": "clone",
@@ -215,5 +215,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1520290843
+    "modified": 1547138001
 }

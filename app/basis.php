@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__.'/acf-builder.php';
 
 //include( 'cpts/staff.php' );
 include( 'cpts/project.php' );

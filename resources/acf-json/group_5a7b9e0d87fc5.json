@@ -3,7 +3,7 @@
     "title": "BLOCK: Divider",
     "fields": [
         {
-            "key": "field_5a7b9e318aeea",
+            "key": "field_5a7b9e318aeea__trashed",
             "label": "Divider",
             "name": "",
             "type": "message",
@@ -37,5 +37,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1520290809
+    "modified": 1547137989
 }

@@ -3,7 +3,7 @@
     "title": "PARTIAL: Background",
     "fields": [
         {
-            "key": "field_5a4c29779c51f",
+            "key": "field_5a4c29779c51f__trashed",
             "label": "Background",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59f0fea42609c",
+            "key": "field_59f0fea42609c__trashed",
             "label": "Background Color",
             "name": "background_color",
             "type": "select",
@@ -33,7 +33,7 @@
             },
             "choices": {
                 "none": "None",
-                "diamanti": "Diamanti",
+                "brand": "Basis",
                 "orange": "Orange",
                 "green": "Green",
                 "dark-blue": "Dark Blue",
@@ -50,7 +50,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_59f0fe8c2609b",
+            "key": "field_59f0fe8c2609b__trashed",
             "label": "Background Image",
             "name": "background_image",
             "type": "image",
@@ -74,7 +74,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_59f228b4c7f39",
+            "key": "field_59f228b4c7f39__trashed",
             "label": "Background Video",
             "name": "background_video",
             "type": "url",
@@ -90,7 +90,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_59f8add820f7d",
+            "key": "field_59f8add820f7d__trashed",
             "label": "Add Classes",
             "name": "add_classes",
             "type": "text",
@@ -109,7 +109,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a4c2c678586d",
+            "key": "field_5a4c2c678586d__trashed",
             "label": "",
             "name": "",
             "type": "tab",
@@ -142,5 +142,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1520291115
+    "modified": 1547138009
 }

@@ -3,7 +3,7 @@
     "title": "TEMPLATE: Story",
     "fields": [
         {
-            "key": "field_5a5fb7fe692ae",
+            "key": "field_5a5fb7fe692ae__trashed",
             "label": "Page Header",
             "name": "page_header",
             "type": "clone",
@@ -24,7 +24,7 @@
             "prefix_name": 1
         },
         {
-            "key": "field_5a5fbb853d8b9",
+            "key": "field_5a5fbb853d8b9__trashed",
             "label": "Top Section",
             "name": "top_section",
             "type": "clone",
@@ -45,7 +45,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_5a5fbb423d8b6",
+            "key": "field_5a5fbb423d8b6__trashed",
             "label": "Story Elements",
             "name": "story_elements",
             "type": "repeater",
@@ -144,7 +144,7 @@
             ]
         },
         {
-            "key": "field_5a5fb83f1becd",
+            "key": "field_5a5fb83f1becd__trashed",
             "label": "Content Blocks",
             "name": "content_blocks",
             "type": "clone",
@@ -189,5 +189,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1521784897
+    "modified": 1547137810
 }

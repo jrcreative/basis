@@ -3,7 +3,7 @@
     "title": "BLOCK: Section",
     "fields": [
         {
-            "key": "field_5a4ad368497a2",
+            "key": "field_5a4ad368497a2__trashed",
             "label": "Foreground",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5a4ad370497a3",
+            "key": "field_5a4ad370497a3__trashed",
             "label": "Heading Alignment",
             "name": "heading_alignment",
             "type": "button_group",
@@ -42,7 +42,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a4ad3e7497a5",
+            "key": "field_5a4ad3e7497a5__trashed",
             "label": "Section Heading",
             "name": "section_heading",
             "type": "text",
@@ -61,7 +61,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a4ad3b9497a4",
+            "key": "field_5a4ad3b9497a4__trashed",
             "label": "Text Color",
             "name": "text_color",
             "type": "button_group",
@@ -83,7 +83,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a79d9377ac3e",
+            "key": "field_5a79d9377ac3e__trashed",
             "label": "Section Title",
             "name": "section_title",
             "type": "text",
@@ -102,7 +102,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a4ad405497a6",
+            "key": "field_5a4ad405497a6__trashed",
             "label": "Columns",
             "name": "columns",
             "type": "button_group",
@@ -126,7 +126,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a4ad44a497a7",
+            "key": "field_5a4ad44a497a7__trashed",
             "label": "Two Column Layout",
             "name": "two_column_layout",
             "type": "radio",
@@ -159,7 +159,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a4ad8924c532",
+            "key": "field_5a4ad8924c532__trashed",
             "label": "Three Column Layout",
             "name": "three_column_layout",
             "type": "radio",
@@ -193,7 +193,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a4ad9606d530",
+            "key": "field_5a4ad9606d530__trashed",
             "label": "Column One",
             "name": "col_1",
             "type": "clone",
@@ -214,7 +214,7 @@
             "prefix_name": 1
         },
         {
-            "key": "field_5a4ad99c6d531",
+            "key": "field_5a4ad99c6d531__trashed",
             "label": "Column Two",
             "name": "col_2",
             "type": "clone",
@@ -243,7 +243,7 @@
             "prefix_name": 1
         },
         {
-            "key": "field_5a4ad9aa6d532",
+            "key": "field_5a4ad9aa6d532__trashed",
             "label": "Column Three",
             "name": "col_3",
             "type": "clone",
@@ -279,7 +279,7 @@
             "prefix_name": 1
         },
         {
-            "key": "field_5a4ad9b46d533",
+            "key": "field_5a4ad9b46d533__trashed",
             "label": "Column Four",
             "name": "col_4",
             "type": "clone",
@@ -308,7 +308,7 @@
             "prefix_name": 1
         },
         {
-            "key": "field_5a4ad601f844f",
+            "key": "field_5a4ad601f844f__trashed",
             "label": "Background",
             "name": "background",
             "type": "clone",
@@ -346,5 +346,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1520290958
+    "modified": 1547137886
 }

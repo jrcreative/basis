@@ -3,7 +3,7 @@
     "title": "PARTIAL: Section Column",
     "fields": [
         {
-            "key": "field_5a4ad64bda388",
+            "key": "field_5a4ad64bda388__trashed",
             "label": "Content Type",
             "name": "content_type",
             "type": "button_group",
@@ -28,7 +28,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a4ad694da389",
+            "key": "field_5a4ad694da389__trashed",
             "label": "Text",
             "name": "text",
             "type": "wysiwyg",
@@ -55,7 +55,7 @@
             "delay": 0
         },
         {
-            "key": "field_5a4ad739da38a",
+            "key": "field_5a4ad739da38a__trashed",
             "label": "Image",
             "name": "image",
             "type": "group",
@@ -161,7 +161,7 @@
             ]
         },
         {
-            "key": "field_5a4ad744da38b",
+            "key": "field_5a4ad744da38b__trashed",
             "label": "Video",
             "name": "video",
             "type": "group",
@@ -299,7 +299,7 @@
             ]
         },
         {
-            "key": "field_5a4ad762da38c",
+            "key": "field_5a4ad762da38c__trashed",
             "label": "Card",
             "name": "card",
             "type": "group",
@@ -440,7 +440,7 @@
             ]
         },
         {
-            "key": "field_5a4ad779da38d",
+            "key": "field_5a4ad779da38d__trashed",
             "label": "Form",
             "name": "form",
             "type": "group",
@@ -507,5 +507,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1522507978
+    "modified": 1547138013
 }

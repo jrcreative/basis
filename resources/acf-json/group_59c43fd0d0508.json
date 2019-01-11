@@ -3,7 +3,7 @@
     "title": "BLOCK: Post Grid",
     "fields": [
         {
-            "key": "field_5a4f0766ee341",
+            "key": "field_5a4f0766ee341__trashed",
             "label": "Post Grid",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5a989ead92660",
+            "key": "field_5a989ead92660__trashed",
             "label": "Heading",
             "name": "heading",
             "type": "clone",
@@ -43,7 +43,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_5a5939240da36",
+            "key": "field_5a5939240da36__trashed",
             "label": "Feed Type",
             "name": "feed_type",
             "type": "button_group",
@@ -67,7 +67,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5a7245fd71eb9",
+            "key": "field_5a7245fd71eb9__trashed",
             "label": "Number of posts",
             "name": "posts_limit",
             "type": "number",
@@ -88,7 +88,7 @@
             "step": 3
         },
         {
-            "key": "field_59c4400635958",
+            "key": "field_59c4400635958__trashed",
             "label": "Article Category",
             "name": "category",
             "type": "taxonomy",
@@ -118,7 +118,7 @@
             "multiple": 0
         },
         {
-            "key": "field_5a593a3003e10",
+            "key": "field_5a593a3003e10__trashed",
             "label": "User Specified",
             "name": "post_list",
             "type": "relationship",
@@ -158,7 +158,7 @@
             "return_format": "id"
         },
         {
-            "key": "field_5a5d4c30aca28",
+            "key": "field_5a5d4c30aca28__trashed",
             "label": "Tag",
             "name": "tag",
             "type": "taxonomy",
@@ -188,7 +188,7 @@
             "multiple": 0
         },
         {
-            "key": "field_5a4c2ae273815",
+            "key": "field_5a4c2ae273815__trashed",
             "label": "Background",
             "name": "background",
             "type": "clone",
@@ -226,5 +226,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1520291147
+    "modified": 1547138017
 }
