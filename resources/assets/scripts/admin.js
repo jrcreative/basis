@@ -1,4 +1,4 @@
-let slider = jQuery('#acf-field_5c152ea55b90a');
+let slider = jQuery('#acf-field_section_columns');
 
 columnWidth(slider[0].value);
 
