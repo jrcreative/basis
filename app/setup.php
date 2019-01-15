@@ -8,6 +8,10 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
+
+$builder = new PageBuilder();
+$builder->register();
+
 /**
  * Theme assets
  */
@@ -144,6 +148,4 @@ add_action('after_setup_theme', function () {
     /**
      * register acf page builder
      */
-    $builder = new PageBuilder();
-    $builder->register();
 });

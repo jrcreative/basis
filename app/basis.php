@@ -1,22 +1,4 @@
 <?php
-
-//include( 'cpts/staff.php' );
-include( 'cpts/project.php' );
-
-include( 'widget/MuamCurrentIssueWidget.php');
-
-/**
- * Register our Widgets
- */
-//add_action( 'widgets_init', function() {
-//	register_widget( 'MuamCurrentIssueWidget' );
-//});
-
-add_action('wp_enqueue_scripts', function () {
-	wp_enqueue_style('sage/librefranklin', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700', false, null);
-	wp_enqueue_script('sage/webfonts', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js', null, true);
-}, 100);
-
 if ( function_exists( 'acf_add_options_page' ) ) {
 	acf_add_options_page( [ 'page_title' => __( "Theme Options", 'basis' ) ] );
 }
@@ -260,7 +242,6 @@ function basis_wrapper_end() {
 
 
 // Customize ACF - move to basis builder plugin
-
 function acf_apply_metabox_title($field_groups) {
 
 	foreach ( $field_groups as $k => $field_group ) {
@@ -271,4 +252,3 @@ function acf_apply_metabox_title($field_groups) {
 
 	return $field_groups;
 }
-//add_filter('acf/get_field_groups', 'acf_apply_metabox_title');

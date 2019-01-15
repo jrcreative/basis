@@ -49,16 +49,34 @@ class PageBuilder
                         "center" => "<span class=\"dashicons dashicons-editor-aligncenter\"></span>",
                         "right" => "<span class=\"dashicons dashicons-editor-alignright\"></span>",
                     ]
-                ])->setWidth('50')
+                ])
                 ->addField('Text Color', 'button_group', [
                     'choices' => [
+                        "body" => "Default",
+                        "dark" => "Dark",
                         "light" => "Light",
-                        "dark" => "Dark"
+                        "primary" => "Primary",
+                        "secondary" => "Secondary",
+                        "info" => "Info",
+                        "success" => "Success",
+                        "warning" => "Warning",
+                        "danger" => "Danger",
                     ]
-                ])->setWidth('50')
-                ->addColorPicker('Background Color')
-                ->addImage('Large Background Image')->setWidth('50')
-                ->addImage('Small Background Image')->setWidth('50')
+                ])
+                ->addField('Background Color',  'button_group', [
+                    'choices' => [
+                        "transparent" => "None",
+                        "dark" => "Dark",
+                        "light" => "Light",
+                        "primary" => "Primary",
+                        "secondary" => "Secondary",
+                        "info" => "Info",
+                        "success" => "Success",
+                        "warning" => "Warning",
+                        "danger" => "Danger",
+                    ]
+                ])
+                ->addImage('Background Image')
                 ->addRadio('Background Video', [
                     'choices' => ['link', 'embed']
                 ])->setWidth('50')
@@ -170,7 +188,11 @@ class PageBuilder
     {
         $this->fields['section'] = new FieldsBuilder('SECTION');
         $this->fields['section']
-            ->setLocation('post_type', '==', 'post')
+            ->setLocation('post_type', '==', 'page')
+            ->setGroupConfig('hide_on_screen', [
+                'the_content',
+                'comments'
+            ])
             ->addTab('Section')
             ->addField('Columns', 'range', [
                 'wrapper' => ['class' => 'column-types'],
