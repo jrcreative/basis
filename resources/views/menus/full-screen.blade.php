@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-sm-6">
         <a class="navbar-brand" href="{{ home_url('/') }}">
-          <img src="{{get_template_directory_uri()}}/../dist/images/revere-logo-white.png" alt="" class="logo-white">
-          <img src="{{get_template_directory_uri()}}/../dist/images/revere-logo-black.png" alt="" class="logo-black">
+          <img src="{{get_template_directory_uri()}}/../dist/images/logo-white.png" alt="" class="logo-white">
+          <img src="{{get_template_directory_uri()}}/../dist/images/logo-black.png" alt="" class="logo-black">
           <span class="sr-only">{{ get_bloginfo('name', 'display') }}</span>
         </a>
       </div>
@@ -50,7 +50,7 @@
       <div class="row">
         <div class="col-sm-6">
           <a class="navbar-brand" href="{{ home_url('/') }}">
-            <img src="{{get_template_directory_uri()}}/../dist/images/revere-logo-white.png" alt="">
+            <img src="{{get_template_directory_uri()}}/../dist/images/logo-white.png" alt="">
             <span class="sr-only">{{ get_bloginfo('name', 'display') }}</span>
           </a>
         </div>

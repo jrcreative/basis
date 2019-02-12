@@ -15,7 +15,6 @@ h1,
 .h1 {
   font-size: 3.75rem;
   letter-spacing: 0;
-  font-family: $playfair$playfair;
 
   .light & {
     color: theme-color('white');
@@ -31,7 +30,6 @@ h2,
   font-size: 2.625rem;
   letter-spacing: 0;
   text-transform: uppercase;
-  font-family: $oswald;
 
   .light & {
     color: theme-color('white');
@@ -53,7 +51,6 @@ h4,
 .h4 {
   font-size: 2.25rem;
   letter-spacing: 0;
-  font-family: $playfair$playfair;
 
   .light & {
     color: theme-color('white');
@@ -75,7 +72,6 @@ h6,
   font-size: 1.25rem;
   letter-spacing: 0;
   line-height: 32px;
-  font-family: $playfair$playfair;
 
   .light & {
     color: theme-color('white');
@@ -191,7 +187,6 @@ blockquote p {
   letter-spacing: 0;
   line-height: 2.11rem;
   font-style: italic;
-  font-family: $playfair$playfair;
 
   + cite {
     margin-top: 2rem;

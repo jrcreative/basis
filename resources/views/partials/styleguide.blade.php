@@ -1,6 +1,6 @@
-<h1>We are Revere.</h1>
+<h1>WHeading 1</h1>
 <h2>Brand Experience Agency</h2>
-<h3>BE REVERED</h3>
+<h3>Heading 2</h3>
 <h4>Smart Creative for Unique Brands</h4>
 <h5>Design is a way of thinking</h5>
 <h6>We are an integrated brand experience agency</h6>

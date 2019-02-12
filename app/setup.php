@@ -16,9 +16,8 @@ $builder->register();
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Oswald:300|Playfair+Display:400,400i,700,700i', false, null);
     wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css', false, null);
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), ['fancybox', 'google-fonts'], null);
+    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), ['fancybox'], null);
     wp_enqueue_script('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js', ['jquery'], null, true);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['fancybox'], null, true);
 }, 100);
