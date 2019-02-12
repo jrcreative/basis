@@ -114,7 +114,7 @@ i.basi {
   width: 100%;
 }
 
-input#acf-field_section_columns-alt {
+.column-types .acf-range-wrap > input:last-child {
   display: none;
 }
 

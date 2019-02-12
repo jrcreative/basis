@@ -1,0 +1,30 @@
+.slick-prev {
+  left: auto;
+  right: 8rem;
+  bottom: 2rem;
+  top: auto;
+  z-index: 1;
+}
+
+.slick-next {
+  left: auto;
+  right: 5rem;
+  bottom: 2rem;
+  top: auto;
+  z-index: 1;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.slick-prev::before {
+  background-image: url(../../images/arrow-black-left.png);
+}
+.slick-next::before {
+  background-image: url(../../images/arrow-black-right.png);
+}

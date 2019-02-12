@@ -1,9 +1,18 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+
+
+$playfair: 'Playfair Display', serif;
+$oswald: 'Oswald', sans-serif;
+
 $theme-colors: (
-  primary: #27ae60
+  primary: #b69a62,
+  secondary: #f9f9f9,
+  dark: #19171d,
 );
+
+$white: #fff;
 
 //Set Background Colors
 @each $label, $color in $theme-colors {
@@ -20,6 +29,7 @@ $theme-colors: (
   }
 }
 
+// slick arrows
 @mixin slick-arrows($size, $color) {
   .slick-next,
   .slick-prev {
@@ -45,6 +55,7 @@ $theme-colors: (
   }
 }
 
+// navbar
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
 
@@ -53,6 +64,7 @@ $headings-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 $body-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 
 // Global
+$enable-rounded: false;
 
 //Section
 $section-padding: 3em 0;

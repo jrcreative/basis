@@ -1,0 +1,20 @@
+.block-title {
+  .small-centered {
+    text-align: center;
+    h1 {
+      font-size: 1rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 3rem;
+        background-color: theme-color('primary');
+        position: absolute;
+        left: calc(50% - 1.5rem);
+        bottom: -1rem;
+      }
+    }
+  }
+}

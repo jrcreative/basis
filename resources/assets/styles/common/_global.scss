@@ -6,14 +6,19 @@ body {
   font-family: $body-font-family;
   color: theme-color("dark");
   overflow-x: hidden;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 30px;
 }
 
 h1,
 .h1 {
-  font-size: 3.5rem;
+  font-size: 3.75rem;
+  letter-spacing: 0;
+  font-family: $playfair$playfair;
 
   .light & {
-    color: white;
+    color: theme-color('white');
   }
 
   &.four-oh-four {
@@ -23,95 +28,62 @@ h1,
 
 h2,
 .h2 {
-  font-size: 3rem;
-  font-weight: 300;
-
-  &.section-heading {
-    font-family: $body-font-family;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: theme-color("blue");
-    text-transform: uppercase;
-
-    .light & {
-      color: theme-color('green');
-    }
-  }
+  font-size: 2.625rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-family: $oswald;
 
   .light & {
-    color: white;
+    color: theme-color('white');
   }
 }
 
 h3,
 .h3 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
 
   .light & {
-    color: white;
+    color: theme-color('white');
   }
 }
 
 h4,
 .h4 {
-  font-size: 1.875rem;
+  font-size: 2.25rem;
+  letter-spacing: 0;
+  font-family: $playfair$playfair;
 
   .light & {
-    color: white;
+    color: theme-color('white');
   }
 }
 
 h5,
 .h5 {
-  font-family: $body-font-family;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0;
 
   .light & {
-    color: white;
+    color: theme-color('white');
   }
 }
 
 h6,
 .h6 {
-  font-family: $body-font-family;
-  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  line-height: 32px;
+  font-family: $playfair$playfair;
 
   .light & {
-    color: white;
+    color: theme-color('white');
   }
-}
-
-a {
-  color: theme-color("orange");
-  font-weight: 600;
-
-  &:hover {
-    color: theme-color("green");
-    text-decoration: none;
-  }
-
-  &.link-arrow {
-    transition: all 300ms linear;
-
-    &::after {
-      content: '»';
-      margin-left: 0.25em;
-      transition: margin-left 200ms ease-in-out;
-    }
-
-    &:hover::after {
-      margin-left: 0.5em;
-    }
-  }
-}
-
-code {
-  color: theme-color("orange");
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.5;
   font-weight: 300;
 
@@ -120,63 +92,112 @@ p {
   }
 
   .light & {
-    color: white;
+    color: theme-color('white');
   }
 }
 
-.text {
-  ol {
-    padding: 1.2em;
-    list-style: none;
-    counter-reset: item;
 
-    > li {
-      font-size: 1.125rem;
-      line-height: 1.5;
-      font-weight: 300;
-      padding-left: 1em;
-      text-indent: -16px;
+.main ul {
+  list-style: none;
 
-      &::before {
-        content: counter(item) ". ";
-        counter-increment: item;
-        color: theme-color('green');
-        position: relative;
-        left: -0.6em;
-      }
+  > li {
+    text-indent: -1.5rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background-image: url(../../images/plus-primary.png);
+      position: relative;
+      left: -1rem;
+      top: 1rem;
     }
   }
+}
 
-  ul {
-    padding: 1.2em;
-    list-style: none;
+a:hover {
+  text-decoration: none;
+}
 
-    > li {
-      font-size: 1.125rem;
-      line-height: 1.5;
-      font-weight: 300;
-      padding-left: 1em;
-      text-indent: -10px;
-      margin-top: 0.5em;
+.btn {
+  line-height: 1;
+}
 
-      &::before {
-        content: "•";
-        color: theme-color('dark');
-        font-size: 33px;
-        line-height: 0;
-        position: relative;
-        top: 0.15em;
-        left: -0.6em;
-      }
-    }
+.btn-outline {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0;
+  padding: 0.77rem 3.33rem;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: theme-color('light');
+  }
+}
+
+.btn-outline-dark {
+  @extend .btn-outline;
+
+  border-color: theme-color('dark');
+  color: theme-color('dark');
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: theme-color('dark');
+  }
+}
+
+.btn-outline-light,
+.btn-outline-primary {
+  @extend .btn-outline;
+
+  border-color: theme-color('white');
+  color: theme-color('white');
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: theme-color('primary');
+    color: theme-color('light');
+  }
+}
+
+.text-link {
+  font-size: 1.22rem;
+  color: theme-color('dark');
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width:26px;
+    height: 16px;
+    background-image: url(../../images/arrow-primary.png);
+    margin-left: 1rem;
+    position: relative;
+    top: 2px;
   }
 
   .light & {
-    color: white;
+    color: theme-color('white');
+  }
+}
 
-    li::before {
-      color: theme-color('dark');
-    }
+blockquote,
+blockquote p {
+  font-size: 1.75rem;
+  letter-spacing: 0;
+  line-height: 2.11rem;
+  font-style: italic;
+  font-family: $playfair$playfair;
+
+  + cite {
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: theme-color('primary');
   }
 }
 
@@ -187,15 +208,6 @@ section {
   &.bg-video {
     overflow: hidden;
   }
-}
-
-#bgvid {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  object-fit: cover;
 }
 
 table {
@@ -232,4 +244,8 @@ table {
     border-left: 1px solid theme-color('dark');
     padding: 0.5em;
   }
+}
+
+hr {
+  max-width: 50rem;
 }

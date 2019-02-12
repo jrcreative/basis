@@ -1,20 +1,20 @@
-let slider = jQuery('#acf-field_section_columns');
+let slider = jQuery('.column-types .acf-range-wrap > input:last-child');
 
-columnWidth(slider[0].value);
-
-console.log(slider[0].value);
-
-slider.change(function() {
-    columnWidth(this.value)
+slider.each(function(){
+  console.log(this.value);
+  columnWidth(this.value, jQuery(this).parents('.acf-fields'));
 });
 
+jQuery(document).on('change', '.column-types .acf-range-wrap > input:first-child', (function() {
+  columnWidth(this.value, jQuery(this).parents('.acf-fields'))
+}));
 
-function columnWidth(width){
 
-    let col1 = jQuery('.admin-section-column-1');
-    let col2 = jQuery('.admin-section-column-2');
-    let col3 = jQuery('.admin-section-column-3');
-    let col4 = jQuery('.admin-section-column-4');
+function columnWidth(width, container){
+    let col1 = container.children('.admin-section-column-1');
+    let col2 = container.children('.admin-section-column-2');
+    let col3 = container.children('.admin-section-column-3');
+    let col4 = container.children('.admin-section-column-4');
 
     function columnClasses(index, className) {
         let classmatch = className.match(/(^|\s)col-md-\S+/g) || [];

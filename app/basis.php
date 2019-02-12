@@ -193,6 +193,11 @@ function basis_gallery( $output = '', $atts, $instance ) {
 add_filter( 'post_gallery', 'basis_gallery', 99, 3 );
 
 add_image_size( 'basis-admin-post-featured-image', 50, 50, true );
+add_image_size( 'basis-post-grid', 600, 400, true );
+add_image_size( 'basis-post-grid-large', 600, 832, true );
+add_image_size( 'extended-team', 285, 395, true );
+add_image_size( 'team', 360, 280, true );
+add_image_size( 'slides', 1140, 520, true );
 
 add_filter( 'manage_posts_columns', 'basis_add_post_admin_thumbnail_column', 2 );
 add_filter( 'manage_pages_columns', 'basis_add_post_admin_thumbnail_column', 2 );
@@ -228,7 +233,6 @@ function basis_column_width() {
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
-
 add_action('woocommerce_before_main_content', 'basis_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'basis_wrapper_end', 10);
 
@@ -252,3 +256,9 @@ function acf_apply_metabox_title($field_groups) {
 
 	return $field_groups;
 }
+
+// remove margin on html
+function basis_remove_html_margin(){
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('get_header', 'basis_remove_html_margin');

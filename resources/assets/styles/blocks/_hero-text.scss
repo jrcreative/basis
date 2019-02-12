@@ -1,0 +1,43 @@
+.block-hero-text {
+  padding-top: 5rem;
+  text-align: center;
+  max-width: 50rem;
+  margin: 0 auto;
+
+  h6 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 5rem;
+      background-color: theme-color('primary');
+      position: absolute;
+      left: calc(50% - 1.5rem);
+      bottom: -2rem;
+    }
+  }
+  p {
+    font-size: 18px;
+    max-width: 80%;
+    margin: 4rem auto 0;
+  }
+}
+
+.single-case_study .block-hero-text {
+  text-align: left;
+
+  h3::after {
+    left: 0;
+  }
+
+  p {
+    margin: 4rem 0;
+  }
+}

@@ -1,5 +1,4 @@
 <?php
-
 namespace App;
 
 use App\ACF\PageBuilder;
@@ -8,6 +7,7 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
+require_once __dir__.'/case-studies/register.php';
 
 $builder = new PageBuilder();
 $builder->register();
@@ -16,8 +16,11 @@ $builder->register();
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Oswald:300|Playfair+Display:400,400i,700,700i', false, null);
+    wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css', false, null);
+    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), ['fancybox', 'google-fonts'], null);
+    wp_enqueue_script('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js', ['jquery'], null, true);
+    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['fancybox'], null, true);
 }, 100);
 
 /**
@@ -46,8 +49,6 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
-        'secondary_navigation' => __('Secondary Navigation', 'sage'),
-        'footer_navigation' => __('Footer Navigation', 'sage'),
     ]);
 
     /**
@@ -80,15 +81,11 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'before_widget' => '<aside class="widget %1$s %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>'
     ];
-    register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
-    ] + $config);
     register_sidebar([
         'name'          => __('Footer 1', 'sage'),
         'id'            => 'sidebar-footer-1'
@@ -97,14 +94,6 @@ add_action('widgets_init', function () {
         'name'          => __('Footer 2', 'sage'),
         'id'            => 'sidebar-footer-2'
     ] + $config);
-    register_sidebar([
-        'name'          => __('Footer 3', 'sage'),
-        'id'            => 'sidebar-footer-3'
-    ] + $config);
-    register_sidebar([
-        'name'          => __('Footer 4', 'sage'),
-        'id'            => 'sidebar-footer-4'
-	] + $config );
 } );
 
 /**

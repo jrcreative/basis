@@ -1,0 +1,24 @@
+.post-teaser {
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+.single-post {
+  padding-top: 4rem;
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+.archive .main,
+.blog .main {
+  padding-top: 4rem;
+}

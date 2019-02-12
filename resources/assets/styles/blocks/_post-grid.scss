@@ -1,0 +1,47 @@
+.post-grid-item {
+  position: relative;
+  margin-bottom: 2rem;
+  display: block;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .post-grid-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    color: $white;
+    z-index: 1;
+  }
+
+  .text-link {
+    color: $white;
+    transition: color 250ms ease-out;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: rgba(#19171D, 0.45);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 250ms ease-out;
+  }
+
+  &:hover, &:focus, &:active {
+    &::after {
+      background-color: rgba(#19171D, 0.75);
+    }
+
+    .text-link {
+      color: theme-color('primary');
+    }
+  }
+}

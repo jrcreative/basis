@@ -1,0 +1,54 @@
+.block-extended-team {
+  h1 {
+    position: relative;
+    margin-bottom: 5rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 4rem;
+      background-color: theme-color('primary');
+      position: absolute;
+      left: calc(50% - 1.5rem);
+      bottom: -2rem;
+    }
+  }
+
+  h6 {
+    &::after {
+      content: "";
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background: theme-color("dark");
+      margin: 1rem 0 1.5rem 0;
+    }
+  }
+
+  .profile-wrapper {
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      margin: 0;
+
+      @include media-breakpoint-up(md) {
+        position: relative;
+        bottom: -10px;
+      }
+    }
+  }
+
+  .content {
+    padding: 4rem 2rem 2rem;
+  }
+
+  .slick {
+    border: 1px solid #D8D8D8;
+  }
+
+  .slick-prev, .slick-next {
+    bottom: 1rem;
+  }
+}

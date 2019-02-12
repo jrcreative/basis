@@ -1,0 +1,19 @@
+.social-navigation {
+  a {
+    color: $white;
+    transition: color 250ms ease-out;
+    border-left: 1px solid $white;
+    padding: 0 1rem;
+    line-height: 1;
+
+    &:hover {
+      color: theme-color('primary');
+      text-decoration: underline;
+    }
+
+    &:first-of-type {
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+}

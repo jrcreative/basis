@@ -1,0 +1,40 @@
+.prefooter {
+  padding: 8rem 0 7rem;
+  background-color: $white;
+  background-image: url(../images/prefooter.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  
+  h2 {
+    margin-bottom: 3.7rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 3rem;
+      background-color: theme-color('primary');
+      position: absolute;
+      left: calc(50% - 1.5rem);
+      bottom: -2rem;
+    }
+  }
+}
+
+.footer {
+  padding: 2rem 0;
+  background-color: theme-color('dark');
+  color: theme-color('light');
+  font-size: 0.72rem;
+
+  .icon {
+    margin-bottom: 1.33rem;
+  }
+
+  .social-navigation {
+    justify-content: center;
+    margin-top: 1.33rem;
+  }
+}

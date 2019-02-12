@@ -54,3 +54,30 @@
   @extend .sr-only;
   @extend .sr-only-focusable;
 }
+
+.comment-form input[type="submit"],
+.btn-secondary, .comment-form input[type="submit"], .search-form .search-submit,
+.form-submit .submit {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0;
+  padding: 0.77rem 3.33rem;
+  border-color: theme-color('dark');
+  color: theme-color('dark');
+  background-color: transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: theme-color('dark');
+    color: theme-color('light');
+  }
+}
+
+.search-form .search-field {
+  border: 1px solid theme-color('dark');
+  font-size: 1rem;
+  letter-spacing: 0;
+  padding: 0.515rem 3.33rem;
+  border-right: none;
+}

@@ -1,0 +1,14 @@
+.block-case-studies-grid {
+  h2 {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 4rem;
+      background-color: theme-color('primary');
+      margin: 2rem 0 3rem;
+    }
+  }
+}

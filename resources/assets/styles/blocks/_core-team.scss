@@ -1,0 +1,17 @@
+.block-core-team {
+  h1 {
+    position: relative;
+    margin-bottom: 5rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 4rem;
+      background-color: theme-color('primary');
+      position: absolute;
+      left: calc(50% - 1.5rem);
+      bottom: -2rem;
+    }
+  }
+}

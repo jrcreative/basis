@@ -1,7 +1,9 @@
 @import "common/variables";
 
 /** Import everything from autoload */
-@import "./autoload/**/*";
+@import "~bootstrap/scss/bootstrap";
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
 
 /**
  * Import npm dependencies
@@ -17,9 +19,31 @@
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
+@import "components/slick";
+@import "layouts/primary-menu";
+@import "layouts/social-navigation";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "blocks/hero-image";
+@import "blocks/hero-text";
+@import "blocks/text";
+@import "blocks/titile";
+@import "blocks/post-grid";
+@import "blocks/case-studies";
+@import "blocks/slider";
+@import "blocks/team";
+@import "blocks/image";
+@import "blocks/gallery";
+@import "blocks/post";
+@import "blocks/search";
+@import "blocks/core-team";
+@import "blocks/extended-team";
+@import "blocks/instagream";
+
+body {
+  position: relative;
+}

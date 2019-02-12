@@ -1,0 +1,44 @@
+.block-gallery {
+
+  h2 {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 4rem;
+      background-color: theme-color('primary');
+      margin: 2rem 0 3rem;
+    }
+  }
+
+  a {
+    position: relative;
+    display: block;
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: rgba(#19171D, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: background-color 250ms ease-out;
+    }
+
+    &:hover, &:focus, &:active {
+      &::after {
+        background-color: rgba(#19171D, 0.75);
+      }
+    }
+  }
+}

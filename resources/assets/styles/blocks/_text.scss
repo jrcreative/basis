@@ -1,0 +1,18 @@
+.block-text {
+  h1 {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 5rem;
+      background-color: theme-color('primary');
+      margin: 2rem 0;
+    }
+  }
+
+  .btn-group {
+    margin-top: 2rem;
+  }
+}
