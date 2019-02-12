@@ -7,8 +7,6 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
-require_once __dir__.'/case-studies/register.php';
-
 $builder = new PageBuilder();
 $builder->register();
 

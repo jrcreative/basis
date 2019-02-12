@@ -22,9 +22,7 @@ class PageBuilder
     public function __construct()
     {
         $this->layouts();
-        $this->filter_layouts();
         $this->fields();
-        $this->filter_fields();
     }
 
     protected function add_layouts(FlexibleContentBuilder $builder, $condition_value = null, $condition_field = 'Columns', $condition_compare = '>')
@@ -292,7 +290,7 @@ class PageBuilder
     {
         $this->fields['footer'] = new FieldsBuilder('FOOTER OPTIONS');
         $this->fields['footer']
-            ->setLocation('post_type', '==', 'page')->or('post_type', '==', 'case_study')
+            ->setLocation('post_type', '==', 'page')
             ->setGroupConfig('hide_on_screen', [
                 'the_content',
                 'comments'
@@ -306,7 +304,7 @@ class PageBuilder
 
         $this->fields['section'] = new FieldsBuilder('PAGE BUILDER');
         $section = $this->fields['section']
-            ->setLocation('post_type', '==', 'page')->or('post_type', '==', 'case_study')
+            ->setLocation('post_type', '==', 'page')
             ->setGroupConfig('hide_on_screen', [
                 'the_content',
                 'comments'
@@ -361,9 +359,11 @@ class PageBuilder
 
     public function register()
     {
-        $fields = $this->fields;
-        add_action('acf/init', function() use ($fields) {
-            foreach($fields as $field) {
+        $buiilder = $this;
+        add_action('acf/init', function() use ($buiilder) {
+            $buiilder->filter_layouts();
+            $buiilder->filter_fields();
+            foreach($buiilder->fields as $field) {
                 acf_add_local_field_group($field->build());
             }
         });
