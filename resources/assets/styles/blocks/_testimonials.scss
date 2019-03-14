@@ -1,0 +1,34 @@
+.block-testimonials {
+  img, .info {
+    display: inline-block;
+  }
+  img {
+    margin-right: 1rem;
+  }
+
+
+
+  .slick-prev {
+    @include media-breakpoint-down(sm) {
+      display: none !important;
+    }
+    @include media-breakpoint-up(md) {
+      left: -1rem;
+    }
+    @include media-breakpoint-up(xl) {
+      left: -2rem;
+    }
+  }
+
+  .slick-next {
+    @include media-breakpoint-down(sm) {
+      display: none !important;
+    }
+    @include media-breakpoint-up(md) {
+      right: -1rem;
+    }
+    @include media-breakpoint-up(xl) {
+      right: -2rem;
+    }
+  }
+}

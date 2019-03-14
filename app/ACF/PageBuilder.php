@@ -39,13 +39,24 @@ class PageBuilder
         return $builder->endFlexibleContent();
     }
 
-    protected function add_tabs($builder, $headings = true, $design = true, $advanced = true)
+    protected function add_tabs($builder, $headings = false, $design = true, $advanced = true)
     {
         if($headings)
         {
             $builder->addTab('Headings')
-                ->addText('Heading')
-                ->addText('Subheading');
+                ->addImage('Icon')
+                ->addRepeater('Headings')
+                ->addSelect('Size', ['choices' => [
+                    'h1' => 'Heading 1',
+                    'h2' => 'Heading 2',
+                    'h3' => 'Heading 3',
+                    'h4' => 'Heading 4',
+                    'h5' => 'Heading 5',
+                    'h6' => 'Heading 6',
+                ]])->setWidth('50')
+                ->addText('Heading')->setWidth('50')
+                ->endRepeater()
+            ;
         }
         if($design)
         {
@@ -63,22 +74,28 @@ class PageBuilder
                 ->addSelect('Text Color', [
                     'choices' => ['default' => 'Default'] + $this->colors,
                 ])->setWidth('50')
-                ->addImage('Background Image')->setWidth('50')
+                ->addSelect('Background Type', ['choices' => ['solid' => 'Solid', 'gradient' => 'Gradient']])->setWidth('50')
+                ->addImage('Background Image')
+                    ->setWidth('25')
+                    ->conditional('Background Type', '==', 'solid')
                 ->addSelect('Background Color', [
                     'choices' => ['default' => 'Default'] + $this->colors,
-                ])->setWidth('50')
-//                ->addRadio('Background Video', [
-//                    'choices' => ['link', 'embed']
-//                ])->setWidth('50')
-//                ->addUrl('Background Video Url')->setWidth('50')->conditional('Background Video', '==', 'link')
-//                ->addOembed('Background Video Embed')->setWidth('50')->conditional('Background Video', '==', 'embed')
-                ;
+                ])
+                    ->setWidth('25')
+                    ->conditional('Background Type', '==', 'solid')
+                ->addColorPicker('Top Background Color')
+                    ->setWidth('25')
+                    ->conditional('Background Type', '==', 'gradient')
+                ->addColorPicker('Bottom Background Color')
+                    ->setWidth('25')
+                    ->conditional('Background Type', '==', 'gradient')
+            ;
         }
         if($advanced)
         {
             $builder
                 ->addTab('Advanced')
-//                ->addText('Admin Label')
+                ->addText('Admin Label')
                 ->addText('ID')->setWidth('50')
                 ->addText('Class(es)')->setWidth('50');
         }
@@ -90,24 +107,39 @@ class PageBuilder
     {
         $this->layouts['text'] = new FieldsBuilder('text', ['label' => 'Text']);
         $this->layouts['text']
-            ->addTab('Text')
+            ->addTab('Content')
             ->addWysiwyg('Content')
-            ->addRepeater('Call To Action')
-            ->addLink('Button')->setWidth('75')
-            ->addSelect('Button Style', [
-                'choices' => $this->colors,
-            ])->setDefaultValue('dark')->setWidth('25')
-            ->endRepeater()
         ;
         $this->layouts['text'] = $this->add_tabs($this->layouts['text']);
 
         $this->layouts['title'] = new FieldsBuilder('title', ['label' => 'Title']);
         $this->layouts['title']
-            ->addTab('Text')
-            ->addText('Title')
-            ->addTrueFalse('Small and Centered')
+            ->addTab('Content')
+            ->addSelect('Size', ['choices' => [
+                'h1' => 'Heading 1',
+                'h2' => 'Heading 2',
+                'h3' => 'Heading 3',
+                'h4' => 'Heading 4',
+                'h5' => 'Heading 5',
+                'h6' => 'Heading 6',
+            ]])->setWidth('50')
+            ->addText('Heading')->setWidth('50')
         ;
         $this->layouts['title'] = $this->add_tabs($this->layouts['title'], false, false, true);
+
+        $this->layouts['hero'] = new FieldsBuilder('hero', ['label' => 'Hero']);
+        $this->layouts['hero']
+            ->addTab('Hero')
+            ->addImage('Background')
+            ->addText('Heading')->setWidth('50')
+            ->addRepeater('Call To Action')
+            ->addLink('Button')->setWidth('75')
+            ->addSelect('Button Style', [
+                'choices' => $this->colors,
+            ])->setDefaultValue('light')->setWidth('25')
+            ->endRepeater()
+        ;
+        $this->layouts['hero'] = $this->add_tabs($this->layouts['hero'], false, false);
 
         $this->layouts['hero-text'] = new FieldsBuilder('hero-text', ['label' => 'Hero Text']);
         $this->layouts['hero-text']
@@ -121,7 +153,15 @@ class PageBuilder
         $this->layouts['image'] = new FieldsBuilder('image', ['label' => 'Image']);
         $this->layouts['image']
             ->addTab('Image')
-            ->addImage('Image')
+            ->addImage('Image')->setWidth('25')
+            ->addTrueFalse('Full Width')->setWidth('25')->setDefaultValue(true)
+            ->addField('Text Alignment', 'button_group', [
+                'choices' => [
+                    "left" => "<span class=\"dashicons dashicons-editor-alignleft\"></span>",
+                    "center" => "<span class=\"dashicons dashicons-editor-aligncenter\"></span>",
+                    "right" => "<span class=\"dashicons dashicons-editor-alignright\"></span>",
+                ]
+            ])->setWidth('50')
         ;
         $this->layouts['image'] = $this->add_tabs($this->layouts['image'], false, false);
 
@@ -133,7 +173,7 @@ class PageBuilder
             ->addImage('Image')
             ->endRepeater()
         ;
-        $this->layouts['gallery'] = $this->add_tabs($this->layouts['gallery'], true, false);
+        $this->layouts['gallery'] = $this->add_tabs($this->layouts['gallery'], false, false);
 
         $this->layouts['divider'] = new FieldsBuilder('Divider');
         $this->layouts['divider']
@@ -142,29 +182,26 @@ class PageBuilder
         ;
         $this->layouts['divider'] = $this->add_tabs($this->layouts['divider'], false);
 
-        $this->layouts['hero'] = new FieldsBuilder('hero', ['label' => 'Hero']);
-        $this->layouts['hero']
-            ->addTab('Hero')
-            ->addImage('Background')
-            ->addText('Heading')->setWidth('50')
-            ->addText('Hashtag')->setWidth('50')
-            ->addRepeater('Call To Action')
-            ->addLink('Button')->setWidth('75')
-            ->addSelect('Button Style', [
-                'choices' => $this->colors,
-            ])->setDefaultValue('light')->setWidth('25')
-            ->endRepeater()
-        ;
-        $this->layouts['hero'] = $this->add_tabs($this->layouts['hero'], false, false);
-
-        $this->layouts['slider'] = new FieldsBuilder('Slider');
-        $this->layouts['slider']
+        $this->layouts['image-slider'] = new FieldsBuilder('image-slider', ['label' => 'Image Slider']);
+        $this->layouts['image-slider']
             ->addTab('Slider')
             ->addRepeater('Slides')
             ->addImage('Slide')
             ->endRepeater()
         ;
-        $this->layouts['slider'] = $this->add_tabs($this->layouts['slider'], false, false);
+        $this->layouts['image-slider'] = $this->add_tabs($this->layouts['image-slider'], false, false);
+
+        $this->layouts['content-slider'] = new FieldsBuilder('content-slider', ['label' => 'Content Slider']);
+        $this->layouts['content-slider']
+            ->addTab('Slider')
+            ->addRepeater('Slides', ['layout' => 'block'])
+            ->addText('Heading')
+            ->addWysiwyg('Content')->setWidth('50')
+            ->addImage('Image')->setWidth('50')
+            ->addLink('Link')
+            ->endRepeater()
+        ;
+        $this->layouts['content-slider'] = $this->add_tabs($this->layouts['content-slider'], false, true);
 
         $this->layouts['core-team'] = new FieldsBuilder('core-team', ['label' => 'Core Team']);
         $this->layouts['core-team']
@@ -183,7 +220,7 @@ class PageBuilder
             ->addText('Author')
             ->endRepeater()
         ;
-        $this->layouts['core-team'] = $this->add_tabs($this->layouts['core-team'], true, false);
+        $this->layouts['core-team'] = $this->add_tabs($this->layouts['core-team'], false, false);
 
         $this->layouts['extended-team'] = new FieldsBuilder('extended-team', ['label' => 'Extended Team']);
         $this->layouts['extended-team']
@@ -281,7 +318,33 @@ class PageBuilder
                 ]
             ])->setWidth('34')
         ;
-        $this->layouts['case_grid'] = $this->add_tabs($this->layouts['case_grid'], true, false, true);
+        $this->layouts['case_grid'] = $this->add_tabs($this->layouts['case_grid'], false, false, true);
+
+        $this->layouts['testimonials'] = new FieldsBuilder('testimonials', ['label' => 'Testimonials']);
+        $this->layouts['testimonials']
+            ->addTab('Testimony')
+            ->addRepeater('Members', ['layout' => 'block'])
+            ->addImage('Head Shot')
+            ->addText('Name')->setWidth('50')
+            ->addText('Position')->setWidth('50')
+            ->addWysiwyg('Testimony')
+            ->endRepeater()
+        ;
+        $this->layouts['testimonials'] = $this->add_tabs($this->layouts['testimonials'], false, true);
+
+        $this->layouts['video'] = new FieldsBuilder('video', ['label' => 'Video']);
+        $this->layouts['video']
+            ->addTab('Video')
+            ->addOembed('video')
+        ;
+        $this->layouts['video'] = $this->add_tabs($this->layouts['video'], false, false);
+
+        $this->layouts['form'] = new FieldsBuilder('form', ['label' => 'Form']);
+        $this->layouts['form']
+            ->addTab('Form')
+            ->addNumber('Form ID')
+        ;
+        $this->layouts['form'] = $this->add_tabs($this->layouts['form'], false, true);
 
         ksort($this->layouts);
     }

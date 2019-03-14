@@ -1,7 +1,6 @@
 let slider = jQuery('.column-types .acf-range-wrap > input:last-child');
 
 slider.each(function(){
-  console.log(this.value);
   columnWidth(this.value, jQuery(this).parents('.acf-fields'));
 });
 
@@ -93,6 +92,8 @@ function columnWidth(width, container){
             break;
         default :
     }
+
+    jQuery(window).trigger('resize');
 }
 
 jQuery('.column-types .acf-label').html('' +
